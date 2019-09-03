@@ -1,0 +1,8 @@
+credentials.json
+token.pickle
+*.txt
+test.jpeg
+/output/
+*.pyc
+*.jpg
+*.jpeg
