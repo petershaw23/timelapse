@@ -4,10 +4,10 @@ import time
 import picamera
 
 with picamera.PiCamera() as camera:
-    camera.start_preview()
-    try:
-        for i in range(100):
-            camera.brightness = i
-            time.sleep(0.2)
-    finally:
-        camera.stop_preview()
+    camera.resolution = (1024, 768)
+    camera.start_preview(fullscreen=False, window=(100,100,256,192))
+    time.sleep(2)
+    camera.preview.window=(200,200,256,192)
+    time.sleep(2)
+    camera.preview.window=(0,0,512,384)
+    time.sleep(2)
