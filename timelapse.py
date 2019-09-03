@@ -8,7 +8,6 @@ WAIT_TIME = 30 # time in seconds
 
 with picamera.PiCamera() as camera:
     camera.resolution = (820, 616)
-    camera.start_preview()
     camera.meter_mode = 'matrix'
     camera.rotation = 180
     sleep(2)
