@@ -13,7 +13,7 @@ WAIT_TIME = 30
 with picamera.PiCamera() as camera:
     camera.resolution = (820, 616)
     camera.rotation = 180
-    for filename in camera.capture_continuous('/home/pi/timelapse/output/img{timestamp:%c}.jpg'):
+    for filename in camera.capture_continuous('/home/pi/timelapse/output/img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print (Datum, Uhrzeit)
         sleep(WAIT_TIME)
         
