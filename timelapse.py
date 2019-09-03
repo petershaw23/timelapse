@@ -3,12 +3,8 @@
 #timelapse script by psw
 from time import sleep
 import picamera
-import datetime
 
-Datum = datetime.datetime.now().strftime('%-d.%-m.')
-Uhrzeit = datetime.datetime.now().strftime('%H:%M:%S')
-
-WAIT_TIME = 30
+WAIT_TIME = 30 # time in seconds
 
 with picamera.PiCamera() as camera:
     camera.resolution = (820, 616)
@@ -17,7 +13,5 @@ with picamera.PiCamera() as camera:
     camera.rotation = 180
     sleep(2)
     for filename in camera.capture_continuous('/home/pi/timelapse/output/img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
-        print (Datum, Uhrzeit)
-        camera.stop_preview()
+        print('Captured %s' % filename)
         sleep(WAIT_TIME)
-        
