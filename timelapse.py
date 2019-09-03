@@ -1,5 +1,6 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
+#timelapse script by psw
 from time import sleep
 import picamera
 import datetime
