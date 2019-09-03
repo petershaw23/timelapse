@@ -51,3 +51,17 @@ else
            echo "List of Remote Names"
            echo "-------------------"
            rclone listremotes
+           echo "--------------------"
+           echo "If List is Empty"
+           echo "Configure a New Remote Storage Name per Command below"
+           echo "    rclone config"
+           echo "or Check Spelling of Variable rcloneName=$rcloneName"
+           echo "For more Details See Readme.txt"
+        fi
+    else
+        echo "ERROR  - /usr/bin/rclone Not Installed."
+        echo "         You Must Install and Configure rclone"
+    fi
+fi
+echo "---------------------------------------------------"
+echo "$progName Bye ..."
