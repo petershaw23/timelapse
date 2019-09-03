@@ -11,6 +11,6 @@ with picamera.PiCamera() as camera:
     camera.meter_mode = 'matrix'
     camera.rotation = 180
     sleep(2)
-    for filename in camera.capture_continuous('/home/pi/timelapse/output/img{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
+    for filename in camera.capture_continuous('/home/pi/timelapse/output/lapse_{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
