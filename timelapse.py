@@ -6,7 +6,7 @@ import picamera
 import datetime
 
 Datum = datetime.datetime.now().strftime('%-d.%-m.')
-Uhrzeit = datetime.datetime.now().strftime('%H:%M')
+Uhrzeit = datetime.datetime.now().strftime('%H:%M:%S')
 
 WAIT_TIME = 30
 
