@@ -38,7 +38,7 @@ with picamera.PiCamera() as camera:
     # camera.iso = 800
     # Give the camera a good long time to measure AWB
     # (you may wish to use fixed AWB instead)
-    sleep(10)
+    sleep(5)
     for filename in camera.capture_continuous('/home/pi/timelapse/output/night_{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
