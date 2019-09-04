@@ -37,9 +37,6 @@ with picamera.PiCamera() as camera:
     # Give the camera a good long time to measure AWB
     # (you may wish to use fixed AWB instead)
     sleep(10)
-    # Finally, capture an image with a 6s exposure. Due
-    # to mode switching on the still port, this will take
-    # longer than 6 seconds
     for filename in camera.capture_continuous('/home/pi/timelapse/output/night_{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
