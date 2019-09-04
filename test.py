@@ -11,7 +11,8 @@ from fractions import Fraction
 WAIT_TIME = 30 # time in seconds
 
 with picamera.PiCamera() as camera:
-    # camera.resolution = (820, 616)
+    # camera.resolution = (820, 616) #crop?
+    camera.resolution = (1640, 1232) #2x2 binned
     camera.meter_mode = 'matrix' # 'average' 'spot' 'backlit' 'matrix'
 
     camera.rotation = 180
