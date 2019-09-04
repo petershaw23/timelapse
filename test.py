@@ -12,7 +12,8 @@ WAIT_TIME = 30 # time in seconds
 
 with picamera.PiCamera() as camera:
     # camera.resolution = (820, 616)
-    camera.meter_mode = 'matrix'
+    camera.meter_mode = 'matrix' # 'average' 'spot' 'backlit' 'matrix'
+
     camera.rotation = 180
     camera.drc_strength = 'high' # 'off' 'low' 'medium' 'high'
     # Set a framerate of 1/6fps, then set shutter
