@@ -38,6 +38,6 @@ with picamera.PiCamera() as camera:
     # camera.iso = 800
     camera.awb_mode = 'shade'   # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
 
-    for filename in camera.capture_continuous('/home/pi/timelapse/output/night_{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
+    for filename in camera.capture_continuous('/home/pi/timelapse/output/night_{counter:05d}__{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
