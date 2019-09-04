@@ -2,6 +2,7 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 #timelapse script by psw TEST MODE
+#reference: https://picamera.readthedocs.io/en/release-1.12/api_camera.html
 
 import picamera
 from time import sleep
