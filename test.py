@@ -36,9 +36,8 @@ with picamera.PiCamera() as camera:
     camera.framerate = Fraction(1, 6)
     camera.exposure_mode = 'night'
     # camera.iso = 800
-    # Give the camera a good long time to measure AWB
-    # (you may wish to use fixed AWB instead)
-    sleep(5)
+    camera.awb_mode = 'shade'   # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
+
     for filename in camera.capture_continuous('/home/pi/timelapse/output/night_{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
