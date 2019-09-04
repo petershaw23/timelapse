@@ -22,9 +22,9 @@ with picamera.PiCamera() as camera:
     
     #camera.framerate = Fraction(1, 6)
     # camera.shutter_speed = 6000000 #6 seconds
-    camera.exposure_mode = 'night' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
+    camera.exposure_mode = 'backlight' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
     # camera.iso = 800 # overwrites exposure mode
-    camera.awb_mode = 'shade' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
+    camera.awb_mode = 'sunlight' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
     
     for filename in camera.capture_continuous('/home/pi/timelapse/output/test_{counter:05d}__{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print(camera.shutter_speed, camera.iso)
