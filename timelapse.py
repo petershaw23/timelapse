@@ -19,9 +19,9 @@ with picamera.PiCamera() as camera:
     # speed to 3s and ISO to 800, exposure mode to off
     
     camera.framerate = Fraction(1, 3)
-    camera.shutter_speed = 3000000 #3 seconds
-    camera.exposure_mode = 'off' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
-    camera.iso = 100 # overwrites exposure mode
+    #camera.shutter_speed = 3000000 #3 seconds
+    camera.exposure_mode = 'verylong' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
+    #camera.iso = 100 # overwrites exposure mode
     camera.awb_mode = 'shade' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
     
     for filename in camera.capture_continuous('/home/pi/timelapse/output/lapse_{counter:05d}__{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
