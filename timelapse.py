@@ -6,7 +6,7 @@
 from time import sleep
 import picamera
 from fractions import Fraction
-
+print('done importing!')
 WAIT_TIME = 30 # time in seconds
 with picamera.PiCamera() as camera:
     # camera.resolution = (820, 616) #crop?
@@ -23,7 +23,7 @@ with picamera.PiCamera() as camera:
     camera.exposure_mode = 'verylong' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
     #camera.iso = 100 # overwrites exposure mode
     camera.awb_mode = 'shade' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
-    
+    print('init cam done!')
     for filename in camera.capture_continuous('/home/pi/timelapse/output/lapse_{counter:05d}__{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
