@@ -18,7 +18,7 @@ with picamera.PiCamera() as camera:
     
     camera.framerate = Fraction(1, 6)
     # camera.shutter_speed = 6000000 #6 seconds
-    camera.exposure_mode = 'night' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
+    camera.exposure_mode = 'verylong' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
     # camera.iso = 800 # overwrites exposure mode
     camera.awb_mode = 'shade' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
     
