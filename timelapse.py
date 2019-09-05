@@ -1,6 +1,8 @@
 #!/usr/bin/python
 # -*- coding:utf-8 -*-
 #timelapse script by psw
+#reference: https://picamera.readthedocs.io/en/release-1.12/api_camera.html
+
 from time import sleep
 import picamera
 from fractions import Fraction
