@@ -6,8 +6,6 @@
 # for manual dark mode: Set a framerate of 1/3fps, then set shutter
 # speed to 3s and ISO to 800, exposure mode to off
 
-
-
 from time import sleep
 import picamera
 from fractions import Fraction
