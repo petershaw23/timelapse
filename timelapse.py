@@ -18,7 +18,7 @@ with picamera.PiCamera() as camera:
     # for dark mode: Set a framerate of 1/6fps, then set shutter
     # speed to 6s and ISO to 800, exposure mode to off
     
-    camera.framerate = Fraction(1, 6)
+    # camera.framerate = Fraction(1, 6)
     # camera.shutter_speed = 6000000 #6 seconds
     camera.exposure_mode = 'night' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
     # camera.iso = 800 # overwrites exposure mode
