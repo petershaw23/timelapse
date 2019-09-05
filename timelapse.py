@@ -23,7 +23,7 @@ with picamera.PiCamera() as camera:
     camera.exposure_mode = 'verylong' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
     #camera.iso = 100 # overwrites exposure mode
     camera.awb_mode = 'shade' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
-    print('init cam done!')
+    print('camera setup done!')
     for filename in camera.capture_continuous('/home/pi/timelapse/output/lapse_{counter:05d}__{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
         print('Captured %s' % filename)
         sleep(WAIT_TIME)
