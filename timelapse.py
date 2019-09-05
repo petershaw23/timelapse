@@ -13,7 +13,7 @@ with picamera.PiCamera() as camera:
     camera.resolution = (1640, 1232) #2x2 binned
     camera.meter_mode = 'matrix' # 'average' 'spot' 'backlit' 'matrix'
     camera.rotation = 180
-    camera.drc_strength = 'high' # 'off' 'low' 'medium' 'high'
+    camera.drc_strength = 'medium' # 'off' 'low' 'medium' 'high'
     
     # for dark mode: Set a framerate of 1/3fps, then set shutter
     # speed to 3s and ISO to 800, exposure mode to off
