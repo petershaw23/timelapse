@@ -19,7 +19,7 @@ with picamera.PiCamera() as camera:
     print('set meter_mode to '+str(camera.meter_mode))
     camera.rotation = 180
     print('set rotation to '+str(camera.rotation))
-    camera.drc_strength = 'off' # 'off' 'low' 'medium' 'high'
+    camera.drc_strength = 'medium' # 'off' 'low' 'medium' 'high'
     print('set drc_strenght to '+str(camera.drc_strength))
     camera.framerate = Fraction(1, 3)
     print('set framerate to '+str(camera.framerate))
