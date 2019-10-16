@@ -13,7 +13,8 @@ print('done importing!')
 WAIT_TIME = 30 # time in seconds
 with picamera.PiCamera() as camera:
     # camera.resolution = (820, 616) #crop?
-    camera.resolution = (1640, 1232) #2x2 binned
+    #camera.resolution = (1640, 1232) #2x2 binned #8MP pi cam v2.1
+    camera.resolution = (1296, 972) #native NOIR cam: 2592 x 1944 Pixel
     print('set resoultion to '+str(camera.resolution))
     camera.meter_mode = 'matrix' # 'average' 'spot' 'backlit' 'matrix'
     print('set meter_mode to '+str(camera.meter_mode))
