@@ -17,11 +17,11 @@ with picamera.PiCamera() as camera:
     print('set resoultion to '+str(camera.resolution))
     camera.meter_mode = 'matrix' # 'average' 'spot' 'backlit' 'matrix'
     print('set meter_mode to '+str(camera.meter_mode))
-    camera.rotation = 180
+    camera.rotation = 0
     print('set rotation to '+str(camera.rotation))
     camera.drc_strength = 'medium' # 'off' 'low' 'medium' 'high'
     print('set drc_strenght to '+str(camera.drc_strength))
-    camera.framerate = Fraction(1, 3)
+    #camera.framerate = Fraction(1, 3)
     print('set framerate to '+str(camera.framerate))
     #camera.shutter_speed = 3000000 #3 seconds
     print('set shutter_speed to '+str(camera.shutter_speed))
@@ -29,7 +29,7 @@ with picamera.PiCamera() as camera:
     print('set exposure_mode to '+str(camera.exposure_mode))
     #camera.iso = 100 # overwrites exposure mode
     print('set iso to '+str(camera.iso))
-    camera.awb_mode = 'shade' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
+    camera.awb_mode = 'flash' # 'off' 'auto'  'sunlight'  'cloudy'  'shade'  'tungsten' 'fluorescent'  'incandescent' 'flash' 'horizon'
     print('set awb_mode to '+str(camera.awb_mode))
     print('camera setup done!')
     for filename in camera.capture_continuous('/home/pi/timelapse/output/lapse_{counter:05d}__{timestamp:%Y-%m-%d-%H-%M-%S}.jpg'):
