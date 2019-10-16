@@ -25,7 +25,7 @@ with picamera.PiCamera() as camera:
     print('set framerate to '+str(camera.framerate))
     #camera.shutter_speed = 3000000 #3 seconds
     print('set shutter_speed to '+str(camera.shutter_speed))
-    camera.exposure_mode = 'verylong' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
+    camera.exposure_mode = 'auto' # 'off' 'auto' 'night' 'nightpreview' 'backlight' 'spotlight' 'sports' 'snow' 'beach' 'verylong' 'fixedfps' 'antishake' 'fireworks'
     print('set exposure_mode to '+str(camera.exposure_mode))
     #camera.iso = 100 # overwrites exposure mode
     print('set iso to '+str(camera.iso))
